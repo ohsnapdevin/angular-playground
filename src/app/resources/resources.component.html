@@ -1,0 +1,10 @@
+<div *ngIf="resources">
+  <div *ngFor="let resource of resources">
+    <div>
+    <h5>Name: {{ resource.name }}</h5>
+    <dd>ID: {{ resource.id }}</dd>
+    <dd>Year: {{ resource.year }}</dd>
+    <dd>Value: {{ resource.pantone_value }}</dd>
+    </div>
+  </div>
+</div>

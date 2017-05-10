@@ -1,0 +1,21 @@
+<h1>Spotify Music Search</h1>
+<p class="lead">Find an artist, song, or album.</p>
+
+<form>
+  <div class="form-group">
+    <input type="text" name="searchStr" [(ngModel)]="searchStr" (keyup)="searchMusic()" class="form-control" placeholder="Search" />
+  </div>
+</form>
+
+<div *ngIf="searchRes">
+  <div *ngFor="let res of searchRes">
+    <div class="search-result">
+      <article class="card">
+          <h5><a href="#">{{ res.name }}</a></h5>
+          <div class="genre">
+            <span *ngFor="let genre of res.genres" class="strong"> {{ genre }}</span>
+          </div>
+      </article>
+    </div>
+  </div>
+</div>
